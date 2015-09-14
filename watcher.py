@@ -7,14 +7,14 @@ import os
 import re
 
 #################################################################################
-#         			 	   Port Watcher 1.0  -        		    												#
+#           	   Port Watcher 1.1 - hamish.earp@Spark.co.nz          		    #
 #################################################################################
 #  Requires Metplotlib library for graphing, nmap for scanning & mutt for mail  #
-#   									sudo apt-get install python-matplotlib               			#
-#				  									 sudo apt-get install nmap					 								#
-#														 sudo apt-get insatll mutt													#
+#   				sudo apt-get install python-matplotlib               		#
+#				  		 sudo apt-get install nmap					 			#
+#						 sudo apt-get insatll mutt								#
 #################################################################################
-#	   				   example: python watcher.py /opt/watcher/test.conf		 						#
+#	   		   example: python watcher.py /opt/watcher/test.conf		 		#
 #################################################################################
 
 
@@ -508,13 +508,13 @@ def mail():																# Function to send output
 	return
 			
 if __name__ == '__main__':					# Main
-	statics()															# Initialize global variables
-	config()															# Process config file
-	scan()																# Execute scan
+	statics()						# Initialize global variables
+	config()						# Process config file
+	scan()							# Execute scan
 	process(statics.filename, "new") 			# process todays scans
 	process(statics.prevfile, "old")			# process yesterdays scans
-	compare()															# work out difference
-	stats()																# input/output graph stats
-	graph()																# generate graphs
-	mail()																# email output
+	compare()						# work out difference
+	stats()							# input/output graph stats
+	graph()							# generate graphs
+	mail()							# email output
 	
