@@ -2,7 +2,7 @@
 This Python script is designed to conduct daily TCP portscans using Nmap and email the open and closed changes to a client. Note: The script ignores filtered ports. Additionally the script will scan all ip's supplied on all ports regardless of ping status.
 
 Scans are setup using the .conf and .hosts files, (see examples).
-Typically the script is placed in /opt/watcher and started via crontab entries. 
+Typically the script is placed in /opt/watcher and started via sudo crontab entries. 
 Output is placed in /var/log/watcher.
 
 crontab example:
@@ -10,7 +10,7 @@ crontab example:
 
 # Dependencies
 
-  - metplotlib for graphing (sudo apt-get install python-matplotlib )
+  - metplotlib for graphing (sudo apt-get install python-matplotlib)
   - nmap for scanning (sudo apt-get install nmap)
   - mutt for email (sudo apt-get insatll mutt)
 
