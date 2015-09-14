@@ -7,7 +7,7 @@ import os
 import re
 
 #################################################################################
-#           	   Port Watcher 1.1 - hamish.earp@Spark.co.nz          		    #
+#           	   Port Watcher 1.1 -          		    #
 #################################################################################
 #  Requires Metplotlib library for graphing, nmap for scanning & mutt for mail  #
 #   				sudo apt-get install python-matplotlib               		#
