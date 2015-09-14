@@ -7,7 +7,7 @@ import os
 import re
 
 #################################################################################
-#           	   Port Watcher 1.1 -          		    #
+#           	   Port Watcher 1.1 -  https://github.com/Caled0/PortWatcher/        		    #
 #################################################################################
 #  Requires Metplotlib library for graphing, nmap for scanning & mutt for mail  #
 #   				sudo apt-get install python-matplotlib               		#
