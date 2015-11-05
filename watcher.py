@@ -552,7 +552,7 @@ def mail():							# Function to send output
 	
 	if statics.change == 0:
 		print "Change!.. Mail Sent"
-		comm = 'mutt -e "set content_type=text/html" -s ' + '"' + "SIRTWatcher - " + statics.scanname + " Change" + '" ' + statics.recipients + " -a /var/log/watcher/" + statics.scanname + "/ports.jpg" + " -a /var/log/watcher/" + statics.scanname + "/hosts.jpg " + "-a /var/log/watcher/" + statics.scanname + "/ips.txt " + "-- < " + statics.difffilename
+		comm = 'mutt -e "set content_type=text/html" -s ' + '"' + "PortWatcher - " + statics.scanname + " Change" + '" ' + statics.recipients + " -a /var/log/watcher/" + statics.scanname + "/ports.jpg" + " -a /var/log/watcher/" + statics.scanname + "/hosts.jpg " + "-a /var/log/watcher/" + statics.scanname + "/ips.txt " + "-- < " + statics.difffilename
 		os.system(comm)
 	else:
 		print "No change.."
