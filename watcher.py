@@ -10,7 +10,7 @@ import re
 # Requires Metplotlib library for graphing, nmap for scanning & mutt for mail
 # sudo apt-get install python-matplotlib               	#
 # sudo apt-get install nmap		
-#sudo apt-get insatll mutt
+# sudo apt-get insatll mutt
 # example: python watcher.py /opt/watcher/test.conf
 
 
