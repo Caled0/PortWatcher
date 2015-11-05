@@ -14,7 +14,7 @@ import re
 # example: python watcher.py /opt/watcher/test.conf
 
 
-def statics():					# Function to hold global static variables
+def statics():						# Function to hold global static variables
 	statics.scanname = ""
 	statics.hostsfile = ""
 	statics.minrate = ""
@@ -43,7 +43,7 @@ def statics():					# Function to hold global static variables
 	statics.udp = ""
 	return
 
-def config():										# Function to process config file input
+def config():						# Function to process config file input
 	print "Processing config file..................."
 	
 	ebuf = []
@@ -130,7 +130,7 @@ def config():										# Function to process config file input
 		os.system("mkdir /var/log/watcher/" + statics.scanname)	
 	return
 	
-def scan():																# Function to conduct nmap scans
+def scan():						# Function to conduct nmap scans
 	print str(statics.day) + " - " + str(statics.scanname)
 	print "Conducting scans.... "
 	statics.filename = "/var/log/watcher/" + statics.scanname + "/" + statics.scanname + "-" + str(statics.day)
@@ -144,7 +144,7 @@ def scan():																# Function to conduct nmap scans
 	statics.filename = statics.filename + ".gnmap"
 	return
 
-def process(filename, status):											# Function to process nmap output
+def process(filename, status):				# Function to process nmap output
 
 	print "Processing scans...." + status
 	
@@ -260,7 +260,7 @@ def process(filename, status):											# Function to process nmap output
 	#print out
 	return
 
-def compare():															# Function to compare nmap scans
+def compare():						# Function to compare nmap scans
 
 	print "Comparing scans...."
 	
@@ -476,7 +476,7 @@ def compare():															# Function to compare nmap scans
 	out.close()	
 	return
 			
-def stats():															# Function to process graph stats
+def stats():						# Function to process graph stats
 
 	print "Processing stats...."
 	
@@ -509,7 +509,7 @@ def stats():															# Function to process graph stats
 	statics.graphliveold = [ -x for x in statics.graphliveold]
 	return
 	
-def graph():															# Function to generate graphs
+def graph():						# Function to generate graphs
 	
 	print "Generating graphs...."		
 	
@@ -548,7 +548,7 @@ def graph():															# Function to generate graphs
 
 	return
 	
-def mail():																# Function to send output	
+def mail():							# Function to send output	
 	
 	if statics.change == 0:
 		print "Change!.. Mail Sent"
@@ -561,13 +561,13 @@ def mail():																# Function to send output
 			
 if __name__ == '__main__':					# Main
 	
-	statics()															# Initialize global variables
-	config()															# Process config file
-	scan()																# Execute scan
+	statics()						# initialize global variables
+	config()						# process config file
+	scan()							# execute scan
 	process(statics.filename, "new")			# process todays scans
 	process(statics.prevfile, "old")			# process yesterdays scans
-	compare()                             # work out differenc
-	stats()																# input/output graph stats
-	graph()																# generate graphs
-	mail()																# email output
+	compare()                             			# work out difference
+	stats()							# input/output graph stats
+	graph()							# generate graphs
+	mail()							# email output
 	
