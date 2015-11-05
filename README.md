@@ -1,5 +1,7 @@
 # Portwatcher
-This Python script is designed to conduct daily TCP & UDP portscans using Nmap and email the open and closed changes to a client. Note: Change the Nmap command in the script as required.. by default the script ignores filtered ports & uses the default Nmap 1000 port scan, ignoring ping status with no reverse DNS. Additional data such as max and min rates and UDP on/off are present in the .conf files.
+This Python script is designed to conduct daily TCP & UDP portscans using Nmap. The differences between yesterdays scan and todays are then emailed to a client, if there is no change no email is sent. 
+
+Note: Change the Nmap command in the script as required.. by default the script ignores filtered ports & uses the default Nmap 1000 port scan, ignoring ping status with no reverse DNS. Additional config data such as max and min rates and UDP on/off are present in the .conf files.
 
 Scans are setup using the .conf and .hosts files, (see examples).
 Typically the script is placed in /opt/watcher and started via root crontab entries (Nmap needs root :(). 
