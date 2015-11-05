@@ -6,19 +6,15 @@ import sys
 import os
 import re
 
-#################################################################################
-#            	Port Watcher 1.4 - https://github.com/Caled0/PortWatcher         	#
-#################################################################################
-#  Requires Metplotlib library for graphing, nmap for scanning & mutt for mail  #
-#   									sudo apt-get install python-matplotlib               			#
-#															sudo apt-get install nmap													#
-#															sudo apt-get insatll mutt													#
-#################################################################################
-#	   		   			example: python watcher.py /opt/watcher/test.conf								#
-#################################################################################
+# Port Watcher 1.4 - https://github.com/Caled0/PortWatcher
+# Requires Metplotlib library for graphing, nmap for scanning & mutt for mail
+# sudo apt-get install python-matplotlib               	#
+# sudo apt-get install nmap		
+#sudo apt-get insatll mutt
+# example: python watcher.py /opt/watcher/test.conf
 
 
-def statics():															# Function to hold global static variables
+def statics():					# Function to hold global static variables
 	statics.scanname = ""
 	statics.hostsfile = ""
 	statics.minrate = ""
@@ -47,7 +43,7 @@ def statics():															# Function to hold global static variables
 	statics.udp = ""
 	return
 
-def config():															# Function to process config file input
+def config():										# Function to process config file input
 	print "Processing config file..................."
 	
 	ebuf = []
