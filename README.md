@@ -20,4 +20,4 @@ Note: SMTP email must be setup and working on the box (ie. sendmail working)
 
 # Disclaimer
 
-This program is free to use/modify/stick-up-your-arse™ no warranty or any expectation that this actually works (it does work) is provided, use at own skill. 
+This program is free to use/modify/stick-up-your-arse™. No warranty or any expectation that this actually works (it does work*) is provided, use at own skill. 
