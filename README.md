@@ -35,7 +35,7 @@ UseTLS=YES
 mailhub=smtp.gmail.com:587
 ```
 
-NOTE: For gmail you will need to enable "less secure apps" under https://myaccount.google.com/lesssecureapps
+NOTE: For Gmail you will need to enable "less secure apps" under https://myaccount.google.com/lesssecureapps
 
 # Disclaimer
 
