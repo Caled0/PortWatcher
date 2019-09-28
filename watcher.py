@@ -124,6 +124,10 @@ def config():						# Function to process config file input
 		pass
 	else:
 		print "ERROR - .conf file does not exist!"
+	if os.path.exists("/var/log/watcher/"):
+		pass
+	else:
+		os.system("mkdir /var/log/watcher")
 	if os.path.isdir("/var/log/watcher/" + statics.scanname):
 		pass
 	else:
@@ -560,7 +564,10 @@ def mail():							# Function to send output
 	return
 			
 if __name__ == '__main__':					# Main
-	
+	if sys.argv[1]:
+		pass
+	else:
+		print "No config file, for example: python watcher.py /opt/watcher/test.conf"
 	statics()						# initialize global variables
 	config()						# process config file
 	scan()							# execute scan
