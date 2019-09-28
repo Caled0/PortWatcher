@@ -19,17 +19,17 @@ crontab example:
 NOTE: SMTP email must be setup and working on the box before you install mutt (ie. sendmail working), todo this:
 
 Under Ubuntu:
-sudo apt-get install ssmtp
-sudo nano /etc/ssmtp/ssmtp.conf
+`sudo apt-get install ssmtp
+sudo nano /etc/ssmtp/ssmtp.conf`
 
 Gmail config example:
-```root=YOURUSERNAME@gmail.com
+`root=YOURUSERNAME@gmail.com
 mailhub=smtp.gmail.com:587
 AuthUser=YOURUSERNAME
 AuthPass=YOURPASSWORD
 UseSTARTTLS=YES
 UseTLS=YES
-mailhub=smtp.gmail.com:587```
+mailhub=smtp.gmail.com:587`
 
 NOTE: For gmail you will need to enable "less secure apps" under https://myaccount.google.com/lesssecureapps
 
