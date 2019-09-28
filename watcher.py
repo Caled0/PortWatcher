@@ -564,10 +564,9 @@ def mail():							# Function to send output
 	return
 			
 if __name__ == '__main__':					# Main
-	if sys.argv[1]:
-		pass
-	else:
+	if len(sys.argv) != 2:
 		print "No config file, for example: python watcher.py /opt/watcher/test.conf"
+		sys.exit(1)
 	statics()						# initialize global variables
 	config()						# process config file
 	scan()							# execute scan
